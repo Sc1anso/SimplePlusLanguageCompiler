@@ -1,0 +1,58 @@
+INSTALL ANTLR FOR ECLIPSE
+
+Access the eclipse marketplace and search for 'antlr'...
+1. Install the AntrlDT plugin
+
+2. Install ANTLR 4 IDE
+
+3. Download ANTLR 4.7 from https://www.antlr.org/download/antlr-4.7.1-complete.jar
+
+If you want to have antlr available as a tool that can be invoked from the command line, refer to these guides:
+https://github.com/antlr/antlr4/blob/master/doc/getting-started.md
+https://github.com/antlr/stringtemplate4/blob/master/doc/java.md
+
+If you are only interested in using ANTLR in Eclipse we can put the file antlr-4.7.1-complete.jar into a path of our choice.
+
+4. Go to the preferences (Window > Preferences). ANTLR 4 > Tool and press Add in the panel on the right. Add the path to the file antlr-4.7.1-complete.jar, select it and press Apply.
+
+To create a new project, simply go to File > New > Project > General > ANTLR 4 Project.
+
+
+HOW TO USE ANTLR FOR DUMMIES
+
+* How to create a new project
+
+1. Create a new Java project (File/New/Java Project) 
+	a. give it a name (WITHOUT SUFFIXES) EXAMPLE Name
+	b. remove the "Use default location" checkbox
+	c. go to "Browse..." and select the "Java sources" folder
+	d. In the window that appears, click on "New Folder" (name the folder with the name of the project)
+	e. press "Open
+	f. press "Finish"
+
+2. Go to the created project/src right-click/New/Package 
+	a. create package "parser
+	
+3. Go to 'parser'/right-click/New/Other/General/Files 
+	a. create file, e.g. Name.g4 (NEXT!)
+
+4. Go to the "Name" project and right-click /Properties/ANTLR4/Tool
+	a. Click on "Enable project specific settings
+	b. Load a version of ANTLR >= 4.6 and select it
+	c. in "Options" write "./src" (WITHOUT DOUBLE-PAXES)
+	d. remove the tick from "Generate a parse tree listener".
+	e. tick "Generate parse tree visitors".
+	f. do "Apply" and "OK"
+
+5. Go to another project, copy the "lib" folder to the project Name
+	a. open lib
+	b. right-click on antlr-4.6-complete.jar
+	c. click on Build Path/add to Build Path
+
+* How to run an example for parsing/analysis
+
+1. Have the Parse Tree console displayed
+	a. in the Eclipse menu: Window/Show View/Other
+	b. in the window that opens: ANTLR4/Parse Tree
+	c. Make build of the project (right-click on the project name, and build...)
+	d. in the Eclipse "Parse Tree" window, paste a file to be parsed (previously created)
