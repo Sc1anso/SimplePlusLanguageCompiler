@@ -1,0 +1,7 @@
+{void f (var int x, var int y){
+	delete x;
+	delete y;
+	}
+int x = 3;
+f(x,x);
+}
