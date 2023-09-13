@@ -3,7 +3,7 @@
 This is the project for the "Compilatori e Interpreti" class.
 
 The following project consists of software that, on the basis of a grammar for a programming language 'SimplePlus.g4', performs the semantic and effects analysis and the generation and execution of code for the described language.
-In the project directory (or package) 'ast', the abstract syntax tree is implemented by means of various Java classes, which allow the code written following the grammar described in the 'SimplePlus.g4' file to be visited. Within these classes (one for each node type) is the code that deals with semantic analysis, effects and the generation of bytecode.
+In the project directory (or package) 'ast', the abstract syntax tree is implemented by means of various Java classes, which allow the code written following the grammar described in the 'SimplePlus.g4' file to be visited. Within these classes (one for each node type) is the code that deals with semantic analysis, behavioural analysis and the generation of bytecode.
 
 The methods that implement the analysis and code generation are:
 - checkSemantics(Environment e): deals with the semantic analysis of the node being visited, it takes as input parameter the environment that will contain the declarations of the variables and functions and their respective information.
